@@ -1,0 +1,17 @@
+[
+    {
+        "id_producto": "PS-001",
+        "nombre": "EcoPanel Monocristalino",
+        "precio": "$350.50",
+        "stock": 15,
+        "tipo": "Panel Solar Fotovoltaico",
+        "potencia_w": "450W",
+        "eficiencia": "22.5%"
+    },
+    {
+        "id_producto": "DE-002",
+        "nombre": "Aerogenerador Doméstico",
+        "precio": "$820.00",
+        "stock": 8
+    }
+]

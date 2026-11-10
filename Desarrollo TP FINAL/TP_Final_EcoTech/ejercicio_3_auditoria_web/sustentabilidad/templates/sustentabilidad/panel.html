@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo_panel }}</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container my-5">
+        <!-- Encabezado del Panel -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="display-5 fw-bold text-success">🌱 EcoTech Solutions</h1>
+                <p class="text-muted lead">{{ titulo_panel }}</p>
+                <hr class="w-50 mx-auto">
+            </div>
+        </div>
+
+        <!-- Tarjetas de Métricas -->
+        <div class="row g-4 justify-content-center">
+            <!-- Tarjeta 1: Total de Emisiones -->
+            <div class="col-md-5">
+                <div class="card shadow-sm border-success h-100">
+                    <div class="card-body text-center p-4">
+                        <h5 class="card-title text-secondary">Emisiones Globales de CO2</h5>
+                        <p class="display-6 fw-bold text-dark mt-3">
+                            {{ metricas.total_emisiones }} <span class="fs-5 text-muted">kg CO2</span>
+                        </p>
+                        <p class="card-text text-muted small">Calculado bajo factor de emisión estándar de planta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Planta de Mayor Consumo -->
+            <div class="col-md-5">
+                <div class="card shadow-sm border-primary h-100">
+                    <div class="card-body text-center p-4">
+                        <h5 class="card-title text-secondary">Planta con Mayor Consumo</h5>
+                        <p class="display-6 fw-bold text-primary mt-3">
+                            {{ metricas.planta_mayor_consumo|default:"Sin registros" }}
+                        </p>
+                        <p class="card-text text-muted small">Identificada mediante auditoría algorítmica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer class="text-center mt-5 text-muted small">
+            <p>Sistema de Auditoría Energética e Industrial &bull; EcoTech Solutions © 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
